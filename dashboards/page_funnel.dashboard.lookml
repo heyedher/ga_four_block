@@ -1,5 +1,5 @@
 
-- dashboard: ga4_page_funnel
+- dashboard: ga4_page_funnel_test
   title: "[GA4] Page Funnel"
   layout: newspaper
   preferred_viewer: dashboards-next

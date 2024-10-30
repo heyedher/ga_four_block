@@ -1,4 +1,4 @@
-- dashboard: ga4_event_funnel
+- dashboard: ga4_event_funnel_test
   title: "[GA4] Event Funnel"
   layout: newspaper
   preferred_viewer: dashboards-next

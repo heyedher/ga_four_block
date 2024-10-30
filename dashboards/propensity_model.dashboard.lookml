@@ -1,4 +1,4 @@
-- dashboard: propensity_model
+- dashboard: propensity_model_test
   title: "[GA4] Propensity Model"
   layout: newspaper
   preferred_viewer: dashboards-next

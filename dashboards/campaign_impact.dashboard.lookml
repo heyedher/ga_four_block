@@ -1,4 +1,4 @@
-- dashboard: ga4_campaign_impact
+- dashboard: ga4_campaign_impact_test
   title: "[GA4] Campaign Impact"
   layout: newspaper
   preferred_viewer: dashboards-next

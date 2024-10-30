@@ -1,4 +1,4 @@
-- dashboard: behavior
+- dashboard: behavior_test
   title: "[GA4] Behavior"
   layout: newspaper
   preferred_viewer: dashboards-next

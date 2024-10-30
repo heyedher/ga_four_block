@@ -1,4 +1,4 @@
-- dashboard: ga4_bqml_performance_metrics
+- dashboard: ga4_bqml_performance_metrics_test
   title: "[GA4] BQML Performance Metrics"
   layout: newspaper
   preferred_viewer: dashboards-next

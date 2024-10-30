@@ -1,5 +1,5 @@
 ---
-- dashboard: arima
+- dashboard: arima_test
   title: "[GA4] ARIMA Model"
   layout: newspaper
   preferred_viewer: dashboards-next

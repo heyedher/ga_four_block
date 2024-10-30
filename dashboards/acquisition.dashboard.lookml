@@ -1,4 +1,4 @@
-- dashboard: acquisition
+- dashboard: acquisition_test
   title: "[GA4] Acquisition"
   layout: newspaper
   preferred_viewer: dashboards-next
