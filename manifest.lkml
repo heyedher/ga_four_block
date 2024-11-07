@@ -24,7 +24,7 @@ constant: model_step_prediction {
   #export: override_optional
 }
 constant: BQML_PARAMETER {
-  value: "Yes"
+  value: "No"
   export: override_optional
 }
 
