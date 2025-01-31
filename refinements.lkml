@@ -31,7 +31,7 @@ datagroup: six_minute_refresh {
 
 view: +session_list_with_event_history {
   derived_table: {
-    datagroup_trigger: six_minute_refresh
+    datagroup_trigger: hour
     sql: select partition_date session_date
             ,  (select value.int_value from UNNEST(events.event_params) where key = "ga_session_id") ga_session_id
             ,  (select value.int_value from UNNEST(events.event_params) where key = "ga_session_number") ga_session_number
@@ -79,31 +79,31 @@ view: +session_list_with_event_history {
 
 view: +device_geo {
   derived_table: {
-    sql_trigger_value: SELECT TIMESTAMP_SECONDS(DIV(UNIX_SECONDS(CURRENT_TIMESTAMP()), 360) * 360);;
+    sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP()) ;;
   }
 }
 
 view: +session_facts {
   derived_table: {
-    sql_trigger_value: SELECT TIMESTAMP_SECONDS(DIV(UNIX_SECONDS(CURRENT_TIMESTAMP()), 360) * 360);;
+    sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP()) ;;
   }
 }
 
 view: +session_tags {
   derived_table: {
-    sql_trigger_value: SELECT TIMESTAMP_SECONDS(DIV(UNIX_SECONDS(CURRENT_TIMESTAMP()), 360) * 360);;
+    sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP()) ;;
   }
 }
 
 view: +session_event_packing {
   derived_table: {
-    sql_trigger_value: `${session_facts.SQL_TABLE_NAME}` ;;
+    sql_trigger_value: ${session_facts.SQL_TABLE_NAME} ;;
   }
 }
 
 view: +sessions {
   derived_table: {
-    sql_trigger_value: `${device_geo.SQL_TABLE_NAME}` ;;
+    sql_trigger_value: ${device_geo.SQL_TABLE_NAME} ;;
   }
 }
 

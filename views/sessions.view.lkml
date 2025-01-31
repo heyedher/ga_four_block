@@ -471,6 +471,18 @@ extends: [event_funnel, page_funnel]
       map_layer_name: us_states
     }
 
+    dimension: table_name {
+      type: string
+      sql: ${session_facts.SQL_TABLE_NAME} ;;
+    }
+
+  dimension: table_name_geo {
+    type: string
+    sql: ${device_geo.SQL_TABLE_NAME} ;;
+  }
+
+
+
 ## Measures
 
   measure: total_sessions {
