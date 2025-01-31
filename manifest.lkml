@@ -1,8 +1,8 @@
-project_name: "ga_four"
+project_name: "ga4_block"
 
 ## Connection Constants:
 constant: GA4_CONNECTION {
-  value: "bq-looker-marketplace"
+  value: "bq-looker-marketplace-ga4"
   export: override_required
 }
 
@@ -12,7 +12,7 @@ constant: GA4_SCHEMA {
 }
 
 constant: GA4_TABLE_VARIABLE {
-  value: "events_*"
+  value: "events_intraday_partitioned"
   export: override_optional
 }
 constant: EVENT_COUNT {
