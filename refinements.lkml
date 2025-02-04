@@ -97,18 +97,18 @@ view: +session_tags {
 
 view: +session_event_packing {
   derived_table: {
-    sql_trigger_value: `${session_facts.SQL_TABLE_NAME}` ;;
+    sql_trigger_value: SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP()) ;;
   }
 }
 
 view: +sessions {
   derived_table: {
-    sql_trigger_value: ${device_geo.SQL_TABLE_NAME} ;;
+    sql_trigger_value:SELECT EXTRACT(HOUR FROM CURRENT_TIMESTAMP())  ;;
   }
 }
 
-view: +future_purchase_model {
-  derived_table: {
-    sql: SELECT 1 ;;
-  }
-}
+# view: +future_purchase_model {
+#   derived_table: {
+#     sql: SELECT 1 ;;
+#   }
+# }
