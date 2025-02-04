@@ -95,17 +95,17 @@ view: +session_tags {
   }
 }
 
-# view: +session_event_packing {
-#   derived_table: {
-#     sql_trigger_value: ${session_facts.SQL_TABLE_NAME} ;;
-#   }
-# }
+view: +session_event_packing {
+  derived_table: {
+    sql_trigger_value: `${session_facts.SQL_TABLE_NAME}` ;;
+  }
+}
 
-# view: +sessions {
-#   derived_table: {
-#     sql_trigger_value: ${device_geo.SQL_TABLE_NAME} ;;
-#   }
-# }
+view: +sessions {
+  derived_table: {
+    sql_trigger_value: ${device_geo.SQL_TABLE_NAME} ;;
+  }
+}
 
 view: +future_purchase_model {
   derived_table: {
