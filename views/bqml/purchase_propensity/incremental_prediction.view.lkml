@@ -59,7 +59,13 @@ view: incremental_prediction {
     datagroup_trigger: bqml_datagroup
     create_process: {
       sql_step:
-        CREATE TABLE IF NOT EXISTS ${SQL_TABLE_NAME} (\n          pred_probability_bucket STRING,\n          total_purchase_revenue_usd FLOAT64,\n          count INT64,\n          week DATE\n        )\n;;
+        CREATE TABLE IF NOT EXISTS ${SQL_TABLE_NAME} (
+          pred_probability_bucket STRING,
+          total_purchase_revenue_usd FLOAT64,
+          count INT64,
+          week DATE
+        )
+;;
       sql_step:
 
         Insert into ${SQL_TABLE_NAME}

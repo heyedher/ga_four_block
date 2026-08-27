@@ -7,6 +7,7 @@ include: "/attributes/*.lkml"
 
 label: "Google Analytics 4"
 
+
 datagroup: ga4_main_datagroup {
   sql_trigger:  SELECT CURRENT_DATE();;
   max_cache_age: "3 hour"
@@ -20,5 +21,6 @@ datagroup: ga4_default_datagroup {
 datagroup: ga4_attribution_channel {
   sql_trigger: SELECT 1 ;;
 }
+
 
 persist_with: ga4_main_datagroup
