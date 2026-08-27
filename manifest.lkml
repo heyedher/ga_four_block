@@ -1,4 +1,4 @@
-project_name: "ga_four"
+project_name: "ga4_block_review"
 
 ## Connection Constants:
 constant: GA4_CONNECTION {
